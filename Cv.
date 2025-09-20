@@ -1,0 +1,200 @@
+I can’t directly attach a PDF from here, but I prepared a print-ready two-column CV as an HTML/CSS file that exactly implements a professional two-column layout. You can quickly convert it to a high-quality PDF (A4) using your browser (Chrome, Edge, Safari) or a tool like wkhtmltopdf.
+
+What I need if you want me to produce the PDF for you:
+- Either upload the two-column layout file you mentioned or confirm any special colors / fonts / logo / photo you want included.
+- Confirm LinkedIn URL (or tell me to keep the placeholder).
+
+If you want to convert it yourself, copy the code below into a text file named resume.html, open it in your browser, then File > Print > Save as PDF (set paper to A4, margins to Normal or Minimum, and scale 100%). Or use wkhtmltopdf / headless Chrome to convert.
+
+HTML/CSS (save as resume.html)
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Aakash Chaturvedi - CV</title>
+<style>
+  @page { size: A4; margin: 20mm; }
+  body { font-family: Arial, Helvetica, sans-serif; color: #111; line-height: 1.15; font-size: 11pt; margin:0; }
+  .container { max-width: 800px; margin: 0 auto; }
+  header { display:flex; justify-content:space-between; align-items:center; border-bottom:2px solid #0b6; padding-bottom:10px; margin-bottom:12px; }
+  .name { font-size:20pt; font-weight:700; color:#0b6; }
+  .contact { text-align:right; font-size:10pt; color:#333; }
+  .topmeta { margin-top:4px; font-size:10pt; color:#333; }
+  .layout { display: grid; grid-template-columns: 1fr 2fr; gap:18px; }
+  .left { background: #fafafa; padding:12px 14px; border-radius:4px; }
+  .right { padding:0 4px; }
+  h3 { margin:8px 0 6px 0; font-size:12pt; color:#0b6; }
+  .muted { color:#555; font-size:10pt; }
+  ul { margin:6px 0 10px 16px; padding:0; }
+  .section { margin-bottom:12px; }
+  .exp-item { margin-bottom:10px; }
+  .exp-item .title { font-weight:600; font-size:11pt; }
+  .exp-item .meta { font-size:9.5pt; color:#666; margin-bottom:4px; }
+  .ach { font-size:10pt; margin-left:14px; }
+  .skills { display:flex; flex-wrap:wrap; gap:6px; }
+  .skill-pill { background:#e9f7ef; color:#0a6; padding:4px 8px; border-radius:12px; font-size:10pt; }
+  footer { margin-top:10px; font-size:9pt; color:#555; border-top:1px solid #eee; padding-top:8px; }
+  .small { font-size:9.5pt; color:#444; }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div>
+      <div class="name">Aakash Chaturvedi</div>
+      <div class="topmeta small">Motivated finance professional — Corporate Finance · Fundraising · Compliance</div>
+    </div>
+    <div class="contact">
+      Mobile: +91 84540 00395<br/>
+      caakash63@yahoo.com<br/>
+      Mumbai, Maharashtra<br/>
+      LinkedIn: (paste link)
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="left">
+      <div class="section">
+        <h3>Professional Summary</h3>
+        <div class="muted">Motivated and detail-oriented finance professional with experience in corporate finance, loan structuring, project finance, IPO/pre-IPO support and regulatory compliance. Strong analytical skills with hands-on exposure to CMA preparation, ALM, MIS and statutory audits.</div>
+      </div>
+
+      <div class="section">
+        <h3>Key Skills</h3>
+        <div class="skills">
+          <div class="skill-pill">Corporate Finance</div>
+          <div class="skill-pill">Project Finance</div>
+          <div class="skill-pill">Fundraising / IPO</div>
+          <div class="skill-pill">CMA & Financial Analysis</div>
+          <div class="skill-pill">IND AS / RBI Filings</div>
+          <div class="skill-pill">ROC / Statutory Audit</div>
+          <div class="skill-pill">Tally ERP</div>
+          <div class="skill-pill">MS Excel</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Education & Qualifications</h3>
+        <div class="small">
+          CA IPCC — Group II, ICAI, Nov 2018 — 50% (Exemption: Adv. Accounting & Auditing)<br/>
+          CA IPCC — Group I, ICAI, May 2017 — 56% (Exemption: Business Law, Ethics & Communication)<br/>
+          CPT, ICAI, Jan 2014 — 50%<br/><br/>
+          B.Com (University of Mumbai), Ritambhara — May 2016 — 68%<br/>
+          HSC, Ritambhara — Feb 2013 — 70%<br/>
+          SSC, Gyan Kendra — Mar 2011 — 70%
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Technical</h3>
+        <div class="small">Tally ERP, MS Excel / Word / PowerPoint, ROC filing, GST & Income Tax utilities</div>
+      </div>
+
+      <div class="section">
+        <h3>Languages</h3>
+        <div class="small">English, Hindi, Marathi, Sanskrit</div>
+      </div>
+    </aside>
+
+    <main class="right">
+      <div class="section">
+        <h3>Experience</h3>
+
+        <div class="exp-item">
+          <div class="title">M/s Onix Renewable Limited — Deputy Manager</div>
+          <div class="meta">May 2025 – Present</div>
+          <ul>
+            <li>Lead strategic loan processing and coordinate with banks for sustainable energy projects.</li>
+            <li>Liaise on corporate finance fundraising (term loans, working capital, project finance) for energy initiatives.</li>
+            <li>Prepare CMA data and project viability analyses to support lending decisions.</li>
+            <li>Support Pre‑IPO / IPO fundraising activities and DRHP filing support in compliance with SEBI.</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div class="title">M/s Gencrest Bio Products Pvt. Ltd. — Assistant Manager</div>
+          <div class="meta">Sept 2024 – Apr 2025</div>
+          <ul>
+            <li>Managed end-to-end loan processing, documentation and bank coordination.</li>
+            <li>Raised INR 150 Crore for project finance and working capital requirements.</li>
+            <li>Prepared and presented CMA reports, cash flow & fund flow statements and profitability analyses.</li>
+            <li>Prepared product budgeting and cost-sheets using BOM techniques.</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div class="title">M/s Shriram Finance Limited — Assistant Manager</div>
+          <div class="meta">Dec 2022 – July 2024</div>
+          <ul>
+            <li>Executed loan processing/documentation and coordinated with multiple banking partners.</li>
+            <li>Supported funding instruments: term loans, working capital, ECBs and NCDs; participated in GMTN program (Jan 2024).</li>
+            <li>Managed corporate accounts and compliance under IND AS; prepared RBI regulatory filings (NBS-3, DNBS-13).</li>
+            <li>Contributed to ALM, book-debt monitoring, QPR and MIS reporting.</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div class="title">Transcon Developers — Assistant Manager</div>
+          <div class="meta">Jan 2022 – Dec 2022</div>
+          <ul>
+            <li>Managed financial documentation and bank coordination for retail and project fundraising.</li>
+            <li>Assisted in finalisation of books of accounts and statutory compliance.</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div class="title">Viva Finance Housing — Accounts Officer</div>
+          <div class="meta">Jan 2021 – Dec 2021</div>
+          <ul>
+            <li>Drafted policies and prepared monthly/quarterly/annual reports.</li>
+            <li>Managed ROC compliances (MGT-7, AOC-4, ADT-1, SH-7) and coordinated with auditors.</li>
+            <li>Assisted in finalisation of accounts and statutory audits.</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div class="title">Chaturvedi Manohar & Associates — Article Trainee</div>
+          <div class="meta">Dec 2017 – Dec 2020</div>
+          <ul>
+            <li>Assisted in finalisation of accounts and statutory audits, filed Income Tax / TDS / GST returns.</li>
+            <li>Conducted bank audit (Bank of Baroda — IBB Branch) and gained practical ROC experience.</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div class="title">Rank & Associates — Audit Assistant (Intern)</div>
+          <div class="meta">Dec 2016 – May 2017</div>
+          <ul>
+            <li>Supported audit fieldwork, bookkeeping and tax compliance tasks.</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div class="title">Saraf & Chandra — Intern</div>
+          <div class="meta">May 2016 – Oct 2016</div>
+          <ul>
+            <li>Assisted with sales tax and income tax matters including scrutiny assessments.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Selected Achievements</h3>
+        <ul class="ach">
+          <li>Raised INR 150 Crore for Gencrest Bio Products (project finance & working capital).</li>
+          <li>Participated in GMTN fund raise program (Shriram Finance) — Jan 2024.</li>
+          <li>Supported DRHP preparation and Pre-IPO activities.</li>
+          <li>Conducted bank audit for Bank of Baroda (IBB Branch) during articleship.</li>
+        </ul>
+      </div>
+
+      <footer>
+        References available on request • Availability: Immediate / as per notice period
+      </footer>
+    </main>
+  </div>
+</div>
+</body>
+</html>
+
